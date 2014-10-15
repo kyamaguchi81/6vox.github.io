@@ -1,6 +1,6 @@
 6vox.github.io
 ==============
 
-Our Company Site.
+6VOX Company Site.
 
 http://6vox.github.io
