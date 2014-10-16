@@ -63,6 +63,7 @@ textarea {
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    font-family: Verdana, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
 .wrapper {
@@ -110,7 +111,7 @@ nav a {
     font-weight: bold;
 
     color: white;
-    background: #666;
+    background: #ccc;
 }
 
 nav a:hover,
@@ -119,7 +120,8 @@ nav a:visited {
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    background: #666;
 }
 
 /* ==============
@@ -157,6 +159,15 @@ section {
   margin: 10px;
   min-height: 300px;
 }
+section h1 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+section table th {
+  text-align: left;
+  padding: 5px 20px;
+}
 
 .footer-container footer {
     color: white;
@@ -192,10 +203,11 @@ section {
 
     nav a {
         float: left;
-        width: 80px;
+        min-width: 80px;
         margin: 2px;
-        padding: 12px 8px;
+        padding: 12px;
         border-radius: 4px;
+        box-sizing: border-box;
     }
 
 /* ========================
