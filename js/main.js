@@ -30,15 +30,17 @@ $(function(){
 
     if ($targ.is(':visible')) {
       //同じものを押された場合はとどまるアニメーション
-      animatecss($targ, pickRandom(GRP_STAY_ANIM), function(){
+      animatecss($(document.body), pickRandom(GRP_STAY_ANIM), function(){
         $(this).removeClass();
       });
     } else {
       //遷移
-      animatecss($('section:visible'), pickRandom(GRP_OUT_ANIM), function(){
-        $(this).hide().removeClass();
+      animatecss($(document.body), pickRandom(GRP_OUT_ANIM), function(){
+        $('section:visible').hide().removeClass();
+        $targ.show();
+        $(this).removeClass();
 
-        animatecss($targ.show(), pickRandom(GRP_IN_ANIM), function(){
+        animatecss($(document.body).show(), pickRandom(GRP_IN_ANIM), function(){
           $(this).removeClass();
         });
       });
